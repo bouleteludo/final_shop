@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const siteUrl=process.env.NEXT_PUBLIC_SITE_URL??"https://ludobricopro.fr";
 export const metadata:Metadata={
@@ -10,4 +11,4 @@ export const metadata:Metadata={
   openGraph:{title:"LUDOBRICOPRO — Un seul pro, pour tout entreprendre",description:"Nettoyage, entretien, petits travaux et espaces verts autour de Saintes.",siteName:"LUDOBRICOPRO",locale:"fr_FR",type:"website"},
   robots:{index:true,follow:true}
 };
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="fr"><body><Header/>{children}</body></html>}
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="fr"><body><Header/>{children}<Footer/></body></html>}
